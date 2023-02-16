@@ -1,6 +1,10 @@
 package hangman.model;
 
+import javax.sound.sampled.Port;
+
 public class PowerScore implements GameScore {
+    public PowerScore(){
+    }
     /* 
      * method: calculateScore
      * purpose: Used to calculate the score from the

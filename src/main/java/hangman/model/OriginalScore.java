@@ -1,6 +1,8 @@
 package hangman.model;
 
 public class OriginalScore implements GameScore {
+    public OriginalScore(){    
+    }
     /*
     * method: calculateScore
     * purpose: Used for calculate the score from 

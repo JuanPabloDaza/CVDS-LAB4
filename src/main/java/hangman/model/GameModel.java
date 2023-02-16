@@ -31,6 +31,8 @@ public class GameModel {
     private Scanner scan;
     private String randomWord;
     private char[] randomWordCharArray;
+    private GameScore gameScoreCalculated;
+
     
     
    
@@ -78,8 +80,8 @@ public class GameModel {
         } else {
             correctCount += positions.size();
         }
+        gameScore = gameScoreCalculated.calculateScore(correctCount, incorrectCount);
         return positions;
-        
     }
     
     //getDateTime

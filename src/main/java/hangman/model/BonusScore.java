@@ -1,6 +1,8 @@
 package hangman.model;
 
 public class BonusScore implements GameScore {
+    public BonusScore(){
+    }
     /* 
      * method: calculateScore
      * purpose: Used to calculate the score from the bonus score 

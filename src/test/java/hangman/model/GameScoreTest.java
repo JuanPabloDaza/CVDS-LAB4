@@ -23,7 +23,7 @@ import org.junit.Test;
  * puntuacion negativa 
  * 
  * Clases de equivalencia PowerBonusScore:
- * 1. En el caso de que la palabra sea de 8 digitos y se adivine el octavo digito
+ * 1. En el caso de que la palabra sea de 4 digitos y se adivine el 4 digito
  * el puntaje sera 500
  * 2.
  * 
@@ -36,8 +36,20 @@ public class GameScoreTest {
         assertEquals(-10 , result);
     }
     @Test
-    public void originalScoreTestExceptionOnNegativeNumbers(){
-        int result = scoreOriginal.calculateScore(0, 0);
+    public void originalScoreTestReduceScore(){
+        int result = scoreOriginal.calculateScore(2, 2);
+        assertEquals(80, result);
     }
-
+    BonusScore scoreBonus = new BonusScore();
+    @Test
+    public void bonusScoreTestIncorrectCountDoubleCorrectCount(){
+        int result = scoreBonus.calculateScore(2, 5);
+        assertEquals(-5, result);
+    }
+    PowerScore scorePower = new PowerScore();
+    @Test
+    public void powerScoreTestMaxScore(){
+        int result = scorePower.calculateScore(4, 0);
+        assertEquals(500, result);
+    }
 }

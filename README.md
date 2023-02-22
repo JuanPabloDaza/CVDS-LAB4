@@ -4,6 +4,7 @@
 
 ### Desarrollo Dirigido por Pruebas + DIP + DI + Contenedores Livianos
 
+# Juan Pablo Daza Pinzon - Juan Sebastian Rodriguez Peña
 
 Para este taller se va a trabajar sobre el juego del ahorcado.
 

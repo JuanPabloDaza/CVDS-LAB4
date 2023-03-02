@@ -33,17 +33,17 @@ public class GameModel {
     private char[] randomWordCharArray;
     private GameScore gameScoreCalculated;
 
-    
-    
-   
-    public GameModel(HangmanDictionary dictionary){
+
+    public GameModel(GameScore score,HangmanDictionary dictionary){
         //this.dictionary = new EnglishDictionaryDataSource();
         this.dictionary=dictionary;
+        this.gameScoreCalculated=score;
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
         gameScore = 100;
+    
         
     }
     
@@ -76,10 +76,12 @@ public class GameModel {
         }
         if(positions.size() == 0){
             incorrectCount++;
-            gameScore -= 10;
         } else {
             correctCount += positions.size();
         }
+
+        //ya tenemos cantidad de correctas e incorrectas
+
         gameScore = gameScoreCalculated.calculateScore(correctCount, incorrectCount);
         return positions;
     }
